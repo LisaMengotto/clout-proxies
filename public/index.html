@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clout Proxies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <main class="main-layout">
+        <section class="sheet-shell">
+          <header class="sheet-header">
+            <p class="logo-mark">Clout Proxies</p>
+            <h1>People use signals to judge your credibility.</h1>
+            <p class="hero-note">
+              Drop a few links or PDFs, choose the categories you care about,
+              and get a report on what to strengthen next.
+            </p>
+          </header>
+
+          <section class="intake-panel">
+            <div class="builder-layout">
+              <section class="capture-panel">
+                <div class="capture-header">
+                  <h2>Add your sources</h2>
+                </div>
+
+                <div id="sources-list" class="sources-list"></div>
+
+                <div class="capture-actions inline-actions">
+                  <button id="add-source-button" class="plus-button" type="button" aria-label="Add source">
+                    +
+                  </button>
+                  <button id="add-file-button" class="plus-button secondary-plus" type="button" aria-label="Add PDF">
+                    +
+                  </button>
+                </div>
+
+                <div class="capture-label-row">
+                  <span>Add link or profile</span>
+                  <span>Add PDF</span>
+                </div>
+
+                <div class="file-upload-row">
+                  <input id="file-input" name="file-input" type="file" accept="application/pdf" multiple hidden />
+                  <div id="file-list" class="file-list"></div>
+                </div>
+              </section>
+
+              <section class="analysis-panel">
+                <div class="analysis-header">
+                  <h2>We can analyze across these 11 fields</h2>
+                  <p>
+                    Pick the ones that matter to you. If a category is irrelevant,
+                    leave it off.
+                  </p>
+                </div>
+                <div class="analysis-actions">
+                  <button id="check-all-button" class="text-action" type="button">Check all</button>
+                  <button id="clear-all-button" class="text-action" type="button">Clear all</button>
+                </div>
+                <div id="categories" class="category-checklist"></div>
+              </section>
+            </div>
+          </section>
+
+          <section class="sheet-step compact-step">
+            <p class="step-copy">
+              The goal is not to score everything. It is to figure out which
+              proxies you care about and where to improve them.
+            </p>
+          </section>
+
+          <section class="context-panel">
+            <label class="context-label" for="context">
+              <span>Optional context</span>
+              <textarea
+                id="context"
+                name="context"
+                placeholder="What are you optimizing for right now? Job search, founder credibility, creator growth, fundraising, prestige, personal brand..."
+              ></textarea>
+            </label>
+          </section>
+
+          <section class="sheet-actions">
+            <div class="email-row">
+              <label class="email-label" for="email">Enter your email to get your report</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <button id="submit-button" class="submit-button" type="button">
+              Analyze
+            </button>
+            <p id="status" class="status-text" aria-live="polite"></p>
+          </section>
+        </section>
+
+        <section id="results-panel" class="panel results-panel">
+          <div class="panel-heading">
+            <p class="section-label">Example Report</p>
+            <h2>What your Clout Proxies report could look like</h2>
+          </div>
+          <div class="results-block">
+            <h3>Overview</h3>
+            <p id="overview-text">Your strongest visible signals are thoughtful positioning, technical credibility, and clear personal narrative. The biggest opportunity is making those strengths easier for strangers to see faster.</p>
+          </div>
+          <div class="results-block">
+            <h3>Encouragement</h3>
+            <p id="encouragement-text">You do not need to improve every proxy. The win is choosing the handful that matter for your life right now, then making those dramatically more legible.</p>
+          </div>
+          <div class="results-block">
+            <h3>What to focus on next</h3>
+            <div id="focus-list" class="focus-list">
+              <article class="focus-card">
+                <div class="focus-topline">Personal / Career Proxies</div>
+                <p>Your background may be stronger than your current presentation. Tighten your LinkedIn, resume framing, and public bio so the strongest signals are obvious.</p>
+                <strong>Rewrite your top-line positioning and lead with the highest-trust proof first.</strong>
+              </article>
+              <article class="focus-card">
+                <div class="focus-topline">Internet / Public Presence</div>
+                <p>Your public footprint should make people understand what you do within seconds. If your website or search results are thin, credibility leaks out there first.</p>
+                <strong>Create a cleaner personal site, sharper bio, and one clear page of proof.</strong>
+              </article>
+              <article class="focus-card">
+                <div class="focus-topline">Media / Narrative</div>
+                <p>If people cannot easily repeat your story, they will invent a weaker one. Strong narrative creates lift across everything else.</p>
+                <strong>Write a simple thesis for who you are, what you are building, and why it matters now.</strong>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
